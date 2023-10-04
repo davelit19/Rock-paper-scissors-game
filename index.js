@@ -59,7 +59,7 @@ for (let i = 0; i < gamePiece.length; i++) {
         housePiece.style.backgroundColor = window.getComputedStyle(gamePiece[num]).backgroundColor;
         housePiece.querySelector(".img-h").src = gamePiece[num].querySelector(".img-d").src;
         // I arranged the links according to their indexes from the rules into an array. Starting from scissors and ending at glove.
-        const arr = ["http://127.0.0.1:5500/images/icon-scissors.svg", "http://127.0.0.1:5500/images/icon-paper.svg", "http://127.0.0.1:5500/images/icon-rock.svg", "http://127.0.0.1:5500/images/icon-lizard.svg", "http://127.0.0.1:5500/images/icon-spock.svg"];
+        const arr = ["images/icon-scissors.svg", "images/icon-paper.svg", "images/icon-rock.svg", "images/icon-lizard.svg", "images/icon-spock.svg"];
         // Got the index of both the user picked and house picked
         let indexYou = arr.indexOf(picked.querySelector(".img-d").src);
         let indexHouse = arr.indexOf(housePiece.querySelector(".img-h").src);

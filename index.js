@@ -35,7 +35,7 @@ btnRules.addEventListener("click", function () {
 });
 
 for (let i = 0; i < gamePiece.length; i++) {
-    gamePiece[i].addEventListener("click", function () {
+    gamePiece[i].addEventListener("click", function (){
         setTimeout(() => {
             iconCont.style.display = "none";
             pickedCont.style.display = "flex";
@@ -61,19 +61,13 @@ for (let i = 0; i < gamePiece.length; i++) {
         
         // I arranged the links according to their indexes from the rules into an array. Starting from scissors and ending at glove.
         
-       // const arr = ["images/icon-scissors.svg", "images/icon-paper.svg", "images/icon-rock.svg", "images/icon-lizard.svg", "images/icon-spock.svg"];
+    
         
-       const arr = [
-        "images/icon-scissors.svg",
-        "images/icon-paper.svg",
-        "images/icon-rock.svg",
-        "images/icon-lizard.svg",
-        "images/icon-spock.svg"
-      ]; 
-      
+     
+
         // Got the index of both the user picked and house picked
-        let indexYou = arr.indexOf(picked.querySelector(".img-d").src);
-        let indexHouse = arr.indexOf(housePiece.querySelector(".img-h").src);
+        let indexYou = imageFinder(picked.querySelector(".img-d").src);
+        let indexHouse = imageFinder(housePiece.querySelector(".img-h").src);
         console.log(housePiece.querySelector(".img-h").src)
         setTimeout(() => {
             /*   if ((indexYou - indexHouse === -1) || (indexYou - indexHouse === 2) || (indexYou === 1 && indexHouse === 4) || (indexYou === 4 && indexHouse === 0) || (indexYou === 0 && indexHouse === 3)) {
@@ -113,7 +107,8 @@ for (let i = 0; i < gamePiece.length; i++) {
                 score.textContent = numScore;
             }
         }, 2500)
-    })
+    
+    });
 
 }
 //get random number
@@ -129,3 +124,18 @@ document.getElementById("rePlay").addEventListener("click", function () {
         result.style.display = "none";
     }, 1000)
 })
+
+//image index function finder
+function imageFinder(pick){
+    const arr = [ "images/icon-scissors.svg",
+        "images/icon-paper.svg",
+        "images/icon-rock.svg",
+        "images/icon-lizard.svg",
+        "images/icon-spock.svg" ]; 
+
+  for(let i = 0; i < arr.length; i++){
+    if(pick.includes(arr[i]) === true){
+      return i
+    } 
+  }
+}

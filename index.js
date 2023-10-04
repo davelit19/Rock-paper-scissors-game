@@ -86,6 +86,8 @@ for (let i = 0; i < gamePiece.length; i++) {
                     outcome.textContent = "you lose";
                     break;
             }
+            console.log(`You picked ${indexYou}`);
+            console.log(`House picked ${indexHouse}`);
             result.style.display = "flex";
             //
             let numScore = Number(score.textContent);

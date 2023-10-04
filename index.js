@@ -58,11 +58,23 @@ for (let i = 0; i < gamePiece.length; i++) {
         housePiece.style.boxShadow = window.getComputedStyle(gamePiece[num]).boxShadow;
         housePiece.style.backgroundColor = window.getComputedStyle(gamePiece[num]).backgroundColor;
         housePiece.querySelector(".img-h").src = gamePiece[num].querySelector(".img-d").src;
+        
         // I arranged the links according to their indexes from the rules into an array. Starting from scissors and ending at glove.
-        const arr = ["images/icon-scissors.svg", "images/icon-paper.svg", "images/icon-rock.svg", "images/icon-lizard.svg", "images/icon-spock.svg"];
+        
+       // const arr = ["images/icon-scissors.svg", "images/icon-paper.svg", "images/icon-rock.svg", "images/icon-lizard.svg", "images/icon-spock.svg"];
+        
+       const arr = [
+        "images/icon-scissors.svg",
+        "images/icon-paper.svg",
+        "images/icon-rock.svg",
+        "images/icon-lizard.svg",
+        "images/icon-spock.svg"
+      ]; 
+      
         // Got the index of both the user picked and house picked
         let indexYou = arr.indexOf(picked.querySelector(".img-d").src);
         let indexHouse = arr.indexOf(housePiece.querySelector(".img-h").src);
+        console.log(housePiece.querySelector(".img-h").src)
         setTimeout(() => {
             /*   if ((indexYou - indexHouse === -1) || (indexYou - indexHouse === 2) || (indexYou === 1 && indexHouse === 4) || (indexYou === 4 && indexHouse === 0) || (indexYou === 0 && indexHouse === 3)) {
                    outcome.textContent = "you win";

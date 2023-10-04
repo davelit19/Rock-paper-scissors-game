@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="index.css" rel="stylesheet">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <main class="main">
+    <header class="header2" id="header">
+      <img src="images\logo-bonus.svg">
+      <section class="score-cont">
+        <p>SCORE</p>
+        <p class="score">12</p>
+      </section>
+    </header>
+    <div class="icon-cont" >
+      <img src="images\bg-pentagon.svg">
+      <div class="scissors-cont piece">
+        <figure class="img-cont">
+          <img src="images\icon-scissors.svg" class="img-d">
+        </figure>
+      </div>
+      <div class="spock-cont piece">
+        <figure class="img-cont">
+          <img src="images\icon-spock.svg" class="img-d">
+        </figure>
+      </div>
+      <div class="paper-cont piece">
+        <figure class="img-cont">
+          <img src="images\icon-paper.svg" class="img-d">
+        </figure>
+      </div>
+      <div class="lizard-cont piece">
+        <figure class="img-cont">
+          <img src="images\icon-lizard.svg" class="img-d">
+        </figure>
+      </div>
+      <div class="rock-cont piece">
+        <figure class="img-cont">
+          <img src="images\icon-rock.svg" class="img-d">
+        </figure>
+      </div>
+    </div>
+  </main>
+  <section class="picked-cont" >
+    <div>
+      <p>You Picked</p>
+      <div class="picked ">
+        <figure class="img-cont">
+          <img src="" class="img-d">
+        </figure> 
+      </div>
+    </div>
+    <div class="result">
+      <p class="outcome"></p>
+      <button id="rePlay" >PLAY AGAIN</button>
+    </div>
+    <div >
+      <p>The House Picked</p>
+      <div class="house1" id="housePreview"></div>
+      <div class="house house-bg" id="housePiece">
+        <figure class="img-cont">
+          <img src="images\icon-scissors.svg" class="img-h">
+        </figure>
+      </div>
+    </div>
+  </section>
+  <div class="rules" id="rules" >
+    <div>
+      <p>RULES</p>
+      <img src="images\icon-close.svg" class="close">
+    </div>
+    <img src="images\image-rules-bonus.svg">
+  </div>
+  <button class="btn" id="btn-rules">RULES</button>
+ <script src="index.js"></script> 
+</body>
+</html>
